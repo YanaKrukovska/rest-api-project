@@ -1,0 +1,52 @@
+GET http://localhost:8080/api/event/all
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/event/all?title=Race
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/event/1
+Accept: application/json
+
+###
+
+POST http://localhost:8080/api/event
+Content-Type: application/json
+
+{
+  "title": "F1",
+  "place": "Brazil",
+  "speaker": "Jenson Button",
+  "eventType": "Race",
+  "dateTime": "2021-11-08T16:00:00.000"
+}
+
+###
+
+PUT http://localhost:8080/api/event
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "F1",
+  "place": "Brazil",
+  "speaker": "Nico Rosberg",
+  "eventType": "Race",
+  "dateTime": "2021-11-08T15:10:00.000"
+}
+
+###
+
+DELETE http://localhost:8080/api/event/2
+Accept: application/json
+
+### Swagger
+
+GET http://localhost:8080/v2/api-docs
+
+### Swagger ui
+
+GET http://localhost:8080/swagger-ui.html
